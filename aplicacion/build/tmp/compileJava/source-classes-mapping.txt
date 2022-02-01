@@ -1,0 +1,12 @@
+com/ceiba/usuario/comando/manejador/ManejadorCrearMoto.java
+ com.ceiba.usuario.comando.manejador.ManejadorCrearMoto
+com/ceiba/usuario/comando/fabrica/FabricaMoto.java
+ com.ceiba.usuario.comando.fabrica.FabricaMoto
+com/ceiba/usuario/comando/manejador/ManejadorEliminarMoto.java
+ com.ceiba.usuario.comando.manejador.ManejadorEliminarMoto
+com/ceiba/usuario/consulta/ManejadorListarMoto.java
+ com.ceiba.usuario.consulta.ManejadorListarMoto
+com/ceiba/usuario/comando/manejador/ManejadorActualizarMoto.java
+ com.ceiba.usuario.comando.manejador.ManejadorActualizarMoto
+com/ceiba/usuario/comando/ComandoMoto.java
+ com.ceiba.usuario.comando.ComandoMoto

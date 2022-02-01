@@ -1,0 +1,11 @@
+com/ceiba/BasePrueba.java
+ com.ceiba.BasePrueba
+ com.ceiba.BasePrueba$Thunk
+com/ceiba/usuario/servicio/testdatabuilder/MotoTestDataBuilder.java
+ com.ceiba.usuario.servicio.testdatabuilder.MotoTestDataBuilder
+com/ceiba/usuario/servicio/ServicioEliminarMotoTest.java
+ com.ceiba.usuario.servicio.ServicioEliminarMotoTest
+com/ceiba/usuario/servicio/ServicioCrearMotoTest.java
+ com.ceiba.usuario.servicio.ServicioCrearMotoTest
+com/ceiba/usuario/entidad/MotoTest.java
+ com.ceiba.usuario.entidad.MotoTest

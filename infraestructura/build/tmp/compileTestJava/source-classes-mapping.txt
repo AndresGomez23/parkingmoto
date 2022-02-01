@@ -1,0 +1,8 @@
+com/ceiba/ApplicationMock.java
+ com.ceiba.ApplicationMock
+com/ceiba/usuario/servicio/testdatabuilder/ComandoMotoTestDataBuilder.java
+ com.ceiba.usuario.servicio.testdatabuilder.ComandoMotoTestDataBuilder
+com/ceiba/usuario/controlador/ConsultaControladorMotoTest.java
+ com.ceiba.usuario.controlador.ConsultaControladorMotoTest
+com/ceiba/usuario/controlador/ComandoControladorMotoTest.java
+ com.ceiba.usuario.controlador.ComandoControladorMotoTest

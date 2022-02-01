@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.ceiba.usuario.entidad.MotoTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-02-01T15:42:13" hostname="ANDRES-NARANJO" time="0.132">
+  <properties/>
+  <testcase name="deberiaFallarSinPlacaDeMoto()" classname="com.ceiba.usuario.entidad.MotoTest" time="0.1"/>
+  <testcase name="deberiaFallarPorLaLongitudPlaca()" classname="com.ceiba.usuario.entidad.MotoTest" time="0.023"/>
+  <testcase name="deberiaFallarSinCilindraje()" classname="com.ceiba.usuario.entidad.MotoTest" time="0.004"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>RepositorioMotoMysql.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">infraestructura</a> &gt; <a href="index.source.html" class="el_package">com.ceiba.usuario.adaptador.repositorio</a> &gt; <span class="el_source">RepositorioMotoMysql.java</span></div><h1>RepositorioMotoMysql.java</h1><pre class="source lang-java linenums">package com.ceiba.usuario.adaptador.repositorio;
+
+import com.ceiba.infraestructura.jdbc.CustomNamedParameterJdbcTemplate;
+import com.ceiba.infraestructura.jdbc.sqlstatement.SqlStatement;
+import com.ceiba.usuario.modelo.entidad.Moto;
+import com.ceiba.usuario.puerto.repositorio.RepositorioMoto;
+import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class RepositorioMotoMysql implements RepositorioMoto {
+
+    private final CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate;
+
+    @SqlStatement(namespace= &quot;sql.usuario&quot;, value=&quot;prueba&quot;)
+    private static String sqlCrear;
+
+    @SqlStatement(namespace= &quot;sql.usuario&quot;, value=&quot;actualizar&quot;)
+    private static String sqlActualizar;
+
+    @SqlStatement(namespace= &quot;sql.usuario&quot;, value=&quot;eliminar&quot;)
+    private static String sqlEliminar;
+
+    @SqlStatement(namespace= &quot;sql.usuario&quot;, value=&quot;existe&quot;)
+    private static String sqlExiste;
+
+    @SqlStatement(namespace= &quot;sql.usuario&quot;, value=&quot;existePorId&quot;)
+    private static String sqlExistePorId;
+
+<span class="fc" id="L30">    public RepositorioMotoMysql(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate) {</span>
+<span class="fc" id="L31">        this.customNamedParameterJdbcTemplate = customNamedParameterJdbcTemplate;</span>
+<span class="fc" id="L32">    }</span>
+
+    @Override
+    public String crear(Moto moto) {
+<span class="nc" id="L36">        MapSqlParameterSource paramSource = new MapSqlParameterSource();</span>
+<span class="nc" id="L37">        paramSource.addValue(&quot;placa&quot;, moto.getPlaca());</span>
+<span class="nc" id="L38">        paramSource.addValue(&quot;casco&quot;, moto.getCasco());</span>
+<span class="nc" id="L39">        paramSource.addValue(&quot;cilindraje&quot;, moto.getCilindraje());</span>
+<span class="nc" id="L40">        paramSource.addValue(&quot;fechaIngreso&quot;, moto.getFechaIngreso());</span>
+<span class="nc" id="L41">        this.customNamedParameterJdbcTemplate.guardar(paramSource, sqlCrear);</span>
+<span class="nc" id="L42">        return moto.getPlaca();</span>
+    }
+
+    @Override
+    public String eliminar(String placa) {
+<span class="nc" id="L47">        MapSqlParameterSource paramSource = new MapSqlParameterSource();</span>
+<span class="nc" id="L48">        paramSource.addValue(&quot;placa&quot;, placa);</span>
+
+<span class="nc" id="L50">        this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().update(sqlEliminar, paramSource);</span>
+<span class="nc" id="L51">        return placa;</span>
+    }
+
+    @Override
+    public boolean existe(String placa) {
+<span class="nc" id="L56">        MapSqlParameterSource paramSource = new MapSqlParameterSource();</span>
+<span class="nc" id="L57">        paramSource.addValue(&quot;placa&quot;, placa);</span>
+
+<span class="nc" id="L59">        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().queryForObject(sqlExiste,paramSource, Boolean.class);</span>
+    }
+
+    @Override
+    public void actualizar(Moto moto) {
+<span class="nc" id="L64">        this.customNamedParameterJdbcTemplate.actualizar(moto, sqlActualizar);</span>
+<span class="nc" id="L65">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>
