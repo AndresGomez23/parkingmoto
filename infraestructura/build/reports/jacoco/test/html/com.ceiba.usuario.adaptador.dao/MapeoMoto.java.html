@@ -10,17 +10,17 @@ import org.springframework.jdbc.core.RowMapper;
 
 
 
-<span class="nc" id="L13">public class MapeoMoto implements RowMapper&lt;DtoMoto&gt;, MapperResult {</span>
+<span class="fc" id="L13">public class MapeoMoto implements RowMapper&lt;DtoMoto&gt;, MapperResult {</span>
 
         @Override
         public DtoMoto mapRow(ResultSet resultSet, int rowNum) throws SQLException {
 
-<span class="nc" id="L18">            String placa = resultSet.getString(&quot;placa&quot;);</span>
-<span class="nc" id="L19">            int casco = resultSet.getInt(&quot;casco&quot;);</span>
-<span class="nc" id="L20">            String cilindraje = resultSet.getString(&quot;cilindraje&quot;);</span>
-<span class="nc" id="L21">            LocalDateTime fecha = extraerLocalDateTime(resultSet, &quot;fecha_ingreso&quot;);</span>
+<span class="fc" id="L18">            String placa = resultSet.getString(&quot;placa&quot;);</span>
+<span class="fc" id="L19">            int casco = resultSet.getInt(&quot;casco&quot;);</span>
+<span class="fc" id="L20">            String cilindraje = resultSet.getString(&quot;cilindraje&quot;);</span>
+<span class="fc" id="L21">            LocalDateTime fecha = extraerLocalDateTime(resultSet, &quot;fecha_ingreso&quot;);</span>
 
-<span class="nc" id="L23">            return new DtoMoto(placa,casco,cilindraje,fecha);</span>
+<span class="fc" id="L23">            return new DtoMoto(placa,casco,cilindraje,fecha);</span>
         }
     }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

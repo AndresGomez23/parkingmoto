@@ -23,7 +23,7 @@ public class DaoMotoMysql implements DaoMoto {
 
     @Override
     public List&lt;DtoMoto&gt; listar() {
-<span class="nc" id="L26">        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().query(sqlListar, new MapeoMoto());</span>
+<span class="fc" id="L26">        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().query(sqlListar, new MapeoMoto());</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

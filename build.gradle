@@ -108,3 +108,5 @@ bootJar {
     baseName = 'adn'
     version =  version
 }
+
+

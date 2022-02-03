@@ -15,12 +15,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class ServicioCrearMotoTest {
 
     @Test
-    @DisplayName("Deberia lanzar una exepecion cuando la longitud de la placa sea menor de 6")
+    @DisplayName("Deberia lanzar una exepecion cuando la longitud de la placa sea menor de 5")
     void deberiaLanzarUnaExepcionCuandoLaLongitudDeLaPlacaSeaMenorDeSeis() {
         // arrange
         MotoTestDataBuilder motoTestDataBuilder = new MotoTestDataBuilder().conPlaca("AAOF71F");
         // act - assert
-        BasePrueba.assertThrows(motoTestDataBuilder::build, ExcepcionLongitudValor.class, "La moto debe de tener en la placa una longitud igual o mayor a 6");
+        BasePrueba.assertThrows(motoTestDataBuilder::build, ExcepcionLongitudValor.class, "La moto debe de tener en la placa una longitud igual o mayor a 5");
     }
 
     @Test
