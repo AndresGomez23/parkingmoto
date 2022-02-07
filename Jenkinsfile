@@ -31,5 +31,3 @@ stage('NPM Install') {
         sh 'npm run e2e'
       }
     }
-
-

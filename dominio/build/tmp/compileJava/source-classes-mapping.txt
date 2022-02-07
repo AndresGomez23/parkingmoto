@@ -1,18 +1,14 @@
-com/ceiba/usuario/modelo/dto/DtoUsuario.java
- com.ceiba.usuario.modelo.dto.DtoUsuario
-com/ceiba/usuario/puerto/dao/DaoMoto.java
- com.ceiba.usuario.puerto.dao.DaoMoto
-com/ceiba/usuario/modelo/dto/DtoMoto.java
- com.ceiba.usuario.modelo.dto.DtoMoto
-com/ceiba/usuario/modelo/entidad/Usuario.java
- com.ceiba.usuario.modelo.entidad.Usuario
-com/ceiba/usuario/modelo/entidad/Moto.java
- com.ceiba.usuario.modelo.entidad.Moto
-com/ceiba/usuario/servicio/ServicioEliminarMoto.java
- com.ceiba.usuario.servicio.ServicioEliminarMoto
-com/ceiba/usuario/servicio/ServicioCrearMoto.java
- com.ceiba.usuario.servicio.ServicioCrearMoto
-com/ceiba/usuario/servicio/ServicioActualizarMoto.java
- com.ceiba.usuario.servicio.ServicioActualizarMoto
-com/ceiba/usuario/puerto/repositorio/RepositorioMoto.java
- com.ceiba.usuario.puerto.repositorio.RepositorioMoto
+com/ceiba/moto/puerto/dao/DaoMoto.java
+ com.ceiba.moto.puerto.dao.DaoMoto
+com/ceiba/moto/modelo/entidad/Moto.java
+ com.ceiba.moto.modelo.entidad.Moto
+com/ceiba/moto/modelo/dto/DtoMoto.java
+ com.ceiba.moto.modelo.dto.DtoMoto
+com/ceiba/moto/servicio/ServicioIngresarMoto.java
+ com.ceiba.moto.servicio.ServicioIngresarMoto
+com/ceiba/moto/puerto/repositorio/RepositorioMoto.java
+ com.ceiba.moto.puerto.repositorio.RepositorioMoto
+com/ceiba/moto/servicio/ServicioRetirarMoto.java
+ com.ceiba.moto.servicio.ServicioRetirarMoto
+com/ceiba/moto/servicio/ServicioActualizarMoto.java
+ com.ceiba.moto.servicio.ServicioActualizarMoto

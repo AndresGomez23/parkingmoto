@@ -10,9 +10,9 @@ public class ServicioEliminarMoto {
 
     private final RepositorioMoto repositorioMoto;
 
-<span class="fc" id="L13">    public ServicioEliminarMoto(RepositorioMoto repositorioMoto) {</span>
-<span class="fc" id="L14">        this.repositorioMoto = repositorioMoto;</span>
-<span class="fc" id="L15">    }</span>
+<span class="nc" id="L13">    public ServicioEliminarMoto(RepositorioMoto repositorioMoto) {</span>
+<span class="nc" id="L14">        this.repositorioMoto = repositorioMoto;</span>
+<span class="nc" id="L15">    }</span>
 
     public String ejecutar(String placa) {
 <span class="nc" id="L18">        validarExistenciaPrevia(placa);</span>
@@ -20,9 +20,9 @@ public class ServicioEliminarMoto {
     }
 
     private void validarExistenciaPrevia(String placa) {
-<span class="fc" id="L23">        boolean existe = this.repositorioMoto.existe(placa);</span>
-<span class="pc bpc" id="L24" title="1 of 2 branches missed.">        if(!existe) {</span>
-<span class="fc" id="L25">            throw new ExcepcionDuplicidad(LA_MOTO_NO_EXISTE);</span>
+<span class="nc" id="L23">        boolean existe = this.repositorioMoto.existe(placa);</span>
+<span class="nc bnc" id="L24" title="All 2 branches missed.">        if(!existe) {</span>
+<span class="nc" id="L25">            throw new ExcepcionDuplicidad(LA_MOTO_NO_EXISTE);</span>
         }
 <span class="nc" id="L27">    }</span>
 }

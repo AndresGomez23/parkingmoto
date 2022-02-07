@@ -1,9 +1,9 @@
 package com.ceiba.configuracion;
 
-import com.ceiba.usuario.puerto.repositorio.RepositorioMoto;
-import com.ceiba.usuario.servicio.ServicioActualizarMoto;
-import com.ceiba.usuario.servicio.ServicioCrearMoto;
-import com.ceiba.usuario.servicio.ServicioEliminarMoto;
+import com.ceiba.moto.puerto.repositorio.RepositorioMoto;
+import com.ceiba.moto.servicio.ServicioActualizarMoto;
+import com.ceiba.moto.servicio.ServicioIngresarMoto;
+import com.ceiba.moto.servicio.ServicioRetirarMoto;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -11,8 +11,8 @@ import org.springframework.context.annotation.Configuration;
 public class BeanServicio {
 
     @Bean
-    public ServicioCrearMoto servicioCrearMoto(RepositorioMoto repositorioMoto) {
-        return new ServicioCrearMoto(repositorioMoto);
+    public ServicioIngresarMoto servicioIngresarMoto(RepositorioMoto repositorioMoto) {
+        return new ServicioIngresarMoto(repositorioMoto);
     }
 
     @Bean
@@ -21,8 +21,8 @@ public class BeanServicio {
     }
 
     @Bean
-    public ServicioEliminarMoto servicioEliminarMoto(RepositorioMoto repositorioMoto) {
-        return new ServicioEliminarMoto(repositorioMoto);
+    public ServicioRetirarMoto servicioRetirarMoto(RepositorioMoto repositorioMoto) {
+        return new ServicioRetirarMoto(repositorioMoto);
     }
 
 }

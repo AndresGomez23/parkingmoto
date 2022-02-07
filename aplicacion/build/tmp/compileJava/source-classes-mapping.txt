@@ -1,12 +1,12 @@
-com/ceiba/usuario/comando/manejador/ManejadorCrearMoto.java
- com.ceiba.usuario.comando.manejador.ManejadorCrearMoto
-com/ceiba/usuario/comando/fabrica/FabricaMoto.java
- com.ceiba.usuario.comando.fabrica.FabricaMoto
-com/ceiba/usuario/comando/manejador/ManejadorEliminarMoto.java
- com.ceiba.usuario.comando.manejador.ManejadorEliminarMoto
-com/ceiba/usuario/consulta/ManejadorListarMoto.java
- com.ceiba.usuario.consulta.ManejadorListarMoto
-com/ceiba/usuario/comando/manejador/ManejadorActualizarMoto.java
- com.ceiba.usuario.comando.manejador.ManejadorActualizarMoto
-com/ceiba/usuario/comando/ComandoMoto.java
- com.ceiba.usuario.comando.ComandoMoto
+com/ceiba/moto/consulta/ManejadorListarMoto.java
+ com.ceiba.moto.consulta.ManejadorListarMoto
+com/ceiba/moto/comando/manejador/ManejadorIngresarMoto.java
+ com.ceiba.moto.comando.manejador.ManejadorIngresarMoto
+com/ceiba/moto/comando/manejador/ManejadorRetirarMoto.java
+ com.ceiba.moto.comando.manejador.ManejadorRetirarMoto
+com/ceiba/moto/comando/ComandoMoto.java
+ com.ceiba.moto.comando.ComandoMoto
+com/ceiba/moto/comando/fabrica/FabricaMoto.java
+ com.ceiba.moto.comando.fabrica.FabricaMoto
+com/ceiba/moto/comando/manejador/ManejadorActualizarMoto.java
+ com.ceiba.moto.comando.manejador.ManejadorActualizarMoto
