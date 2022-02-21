@@ -2,8 +2,11 @@ package com.ceiba.infraestructura.jdbc;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
+import java.util.Optional;
 
 import com.ceiba.infraestructura.excepcion.ExcepcionTecnica;
+import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
@@ -19,6 +22,15 @@ public class CustomNamedParameterJdbcTemplate {
 	
 	public CustomNamedParameterJdbcTemplate(NamedParameterJdbcTemplate namedParameterJdbcTemplate) {
 		this.namedParameterJdbcTemplate = namedParameterJdbcTemplate;
+	}
+
+	public <T> Optional<T> consultarUnicoResultado(String sql, MapSqlParameterSource parametros, RowMapper<T> mapper) {
+		try {
+			T result = namedParameterJdbcTemplate.queryForObject(sql, parametros, mapper);
+			return Optional.of(result);
+		} catch (EmptyResultDataAccessException e) {
+			return Optional.empty();
+		}
 	}
 	
 	public Long crear(Object object,String sql) {
