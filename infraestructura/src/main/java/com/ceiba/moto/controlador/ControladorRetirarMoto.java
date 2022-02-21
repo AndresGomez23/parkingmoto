@@ -19,7 +19,7 @@ public class ControladorRetirarMoto {
     }
 
     @DeleteMapping(value = "/{placa}")
-    @ApiOperation("Rerirar moto")
+    @ApiOperation("Retirar moto")
     public void retirar(@PathVariable String placa ){
         this.manejadorRetirarMoto.ejecutar(placa);
     }

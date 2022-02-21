@@ -1,0 +1,1 @@
+SELECT m.placa, m.cilindraje, m.fecha_ingreso, m.casco FROM moto m WHERE placa = :placa

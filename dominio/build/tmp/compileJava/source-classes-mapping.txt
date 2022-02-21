@@ -1,3 +1,6 @@
+com/ceiba/moto/servicio/ServicioLiquidarMoto.java
+ com.ceiba.moto.servicio.ServicioLiquidarMoto
+ com.ceiba.moto.servicio.ServicioLiquidarMoto$PagoDeMoto
 com/ceiba/moto/puerto/dao/DaoMoto.java
  com.ceiba.moto.puerto.dao.DaoMoto
 com/ceiba/moto/modelo/entidad/Moto.java
@@ -8,7 +11,7 @@ com/ceiba/moto/servicio/ServicioIngresarMoto.java
  com.ceiba.moto.servicio.ServicioIngresarMoto
 com/ceiba/moto/puerto/repositorio/RepositorioMoto.java
  com.ceiba.moto.puerto.repositorio.RepositorioMoto
-com/ceiba/moto/servicio/ServicioRetirarMoto.java
- com.ceiba.moto.servicio.ServicioRetirarMoto
 com/ceiba/moto/servicio/ServicioActualizarMoto.java
  com.ceiba.moto.servicio.ServicioActualizarMoto
+com/ceiba/moto/servicio/ServicioRetirarMoto.java
+ com.ceiba.moto.servicio.ServicioRetirarMoto

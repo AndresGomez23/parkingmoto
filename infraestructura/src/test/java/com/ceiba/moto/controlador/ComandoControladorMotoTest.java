@@ -33,7 +33,7 @@ class ComandoControladorMotoTest {
 
     @Test
     @DisplayName("Deberia ingresar una moto")
-    void deberiaCrearUnaMoto() throws Exception{
+    void deberiaIngresarUnaMoto() throws Exception{
         // arrange
         ComandoMoto moto = new ComandoMotoTestDataBuilder().build();
         // act - assert
@@ -47,18 +47,11 @@ class ComandoControladorMotoTest {
     @Test
     @DisplayName("Deberia retirar una moto")
     void deberiaRetirarUnaMoto() throws Exception {
-        // arrange
-        Long id = 1L;
         // act - assert
-        mocMvc.perform(delete("/retirar/{AAO71F}")
+        mocMvc.perform(delete("/retirar/AAO71A")
                 .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk());
-
-        mocMvc.perform(get("/retirar")
-                .contentType(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("", hasSize(0)));
     }
 
 }

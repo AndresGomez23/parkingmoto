@@ -12,5 +12,5 @@ public class DtoMoto {
     private int casco;
     private String cilindraje;
     private LocalDateTime fechaIngreso;
-
+    private Double precio;
 }

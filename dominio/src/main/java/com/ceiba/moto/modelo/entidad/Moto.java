@@ -1,6 +1,7 @@
 package com.ceiba.moto.modelo.entidad;
 
 import java.time.LocalDateTime;
+import java.util.Date;
 
 import static com.ceiba.dominio.ValidadorArgumento.validarLongitud;
 import static com.ceiba.dominio.ValidadorArgumento.validarObligatorio;

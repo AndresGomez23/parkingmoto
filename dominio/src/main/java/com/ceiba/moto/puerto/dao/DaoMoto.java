@@ -11,4 +11,10 @@ public interface DaoMoto {
      * @return las motos
      */
     List<DtoMoto> listar();
+
+    /**
+     * Permite obtener una moto
+     * @return DtoMoto
+     */
+    DtoMoto obtenerMoto(String placa);
 }

@@ -30,12 +30,11 @@ class ControladorConsultaMotoTest {
     @Test
     @DisplayName("Deberia listar motos")
     void deberiaListarMotos() throws Exception {
-        // arrange
         // act - assert
         mocMvc.perform(get("/moto/all")
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$", hasSize(1)))
+                .andExpect(jsonPath("", hasSize(1)))
                 .andExpect(jsonPath("$[0].placa", is("test")))
                 .andExpect(jsonPath("$[0].placa", is(1)));
 

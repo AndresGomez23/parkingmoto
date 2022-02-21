@@ -1,14 +1,14 @@
+com/ceiba/moto/adaptador/dao/MapeoMoto.java
+ com.ceiba.moto.adaptador.dao.MapeoMoto
+com/ceiba/moto/controlador/ControladorIngresoMoto.java
+ com.ceiba.moto.controlador.ControladorIngresoMoto
+com/ceiba/moto/controlador/ControladorConsultaMoto.java
+ com.ceiba.moto.controlador.ControladorConsultaMoto
 com/ceiba/moto/controlador/ControladorRetirarMoto.java
  com.ceiba.moto.controlador.ControladorRetirarMoto
 com/ceiba/moto/adaptador/repositorio/RepositorioMotoMysql.java
  com.ceiba.moto.adaptador.repositorio.RepositorioMotoMysql
-com/ceiba/moto/controlador/ControladorConsultaMoto.java
- com.ceiba.moto.controlador.ControladorConsultaMoto
-com/ceiba/moto/adaptador/dao/MapeoMoto.java
- com.ceiba.moto.adaptador.dao.MapeoMoto
 com/ceiba/moto/adaptador/dao/DaoMotoMysql.java
  com.ceiba.moto.adaptador.dao.DaoMotoMysql
-com/ceiba/moto/controlador/ControladorIngresoMoto.java
- com.ceiba.moto.controlador.ControladorIngresoMoto
 com/ceiba/configuracion/BeanServicio.java
  com.ceiba.configuracion.BeanServicio

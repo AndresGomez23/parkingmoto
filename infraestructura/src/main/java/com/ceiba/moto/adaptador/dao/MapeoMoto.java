@@ -20,6 +20,6 @@ public class MapeoMoto implements RowMapper<DtoMoto>, MapperResult {
             String cilindraje = resultSet.getString("cilindraje");
             LocalDateTime fecha = extraerLocalDateTime(resultSet, "fecha_ingreso");
 
-            return new DtoMoto(placa,casco,cilindraje,fecha);
+            return new DtoMoto(placa,casco,cilindraje,LocalDateTime.now(),null);
         }
     }
