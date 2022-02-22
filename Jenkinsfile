@@ -1,3 +1,4 @@
+@Library('ceiba-jenkins-library')
 pipeline {
   //Donde se va a ejecutar el Pipeline
   agent {
@@ -59,30 +60,32 @@ pipeline {
     }
 
     stage('Static Code Analysis') {
-      steps{
-        echo '------------>Análisis de código estático<------------'
-        withSonarQubeEnv('Sonar') {
-sh "${tool name: 'SonarScanner', type:'hudson.plugins.sonar.SonarRunnerInstallation'}/bin/sonar-scanner -Dproject.settings=sonar-project.properties"
+        steps{
+            	sonarqubeMasQualityGatesP(sonarKey:'co.com.ceiba.adn:parkingmotoandresnaranjo',
+            sonarName:'CeibaADN-ParkingMotoAndresNaranjo',
+            sonarPathProperties:'./sonar-project.properties')
         }
-      }
     }
 
+
     stage('Build') {
-      steps {
-        echo "------------>Build<------------"
-        		 			sh 'gradle --b ./build.gradle build -x test'
-      }
+          steps{
+                echo "------------>Build<------------"
+                //Construir sin tarea test que se ejecutó previamente
+                sh './gradlew --b ./build.gradle build -x test'
     }
-  }
+    }
 
   post {
     always {
       echo 'This will always run'
     }
+
     success {
-      echo 'This will run only if successful'
-      	 		junit '**/build/test-results/test/*.xml'
+    			echo 'This will run only if successful'
+    junit 'build/test-results/test/*.xml' //RUTA RELATIVA DE LOS ARCHIVOS .XML
     }
+
     failure {
       echo 'This will run only if failed'
       	 		mail (to: 'andres.naranjo@ceiba.com.co',
