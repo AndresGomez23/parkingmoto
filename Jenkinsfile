@@ -39,7 +39,7 @@ pipeline {
         					submoduleCfg: [],
         					userRemoteConfigs:
         						[[
-        							credentialsId: 'Andres.Naranjo',
+        							credentialsId: 'andres.naranjo',
         							url: 'https://github.com/AndresGomez23/parkingmoto.git'
         						]]])
 
@@ -62,8 +62,8 @@ pipeline {
     stage('Static Code Analysis') {
         steps{
             	sonarqubeMasQualityGatesP(sonarKey:'co.com.ceiba.adn:parkingmotoandresnaranjo',
-            sonarName:'CeibaADN-ParkingMotoAndresNaranjo',
-            sonarPathProperties:'./sonar-project.properties')
+                sonarName:'CeibaADN-ParkingMoto(andresnaranjo)',
+                sonarPathProperties:'./sonar-project.properties')
         }
     }
 

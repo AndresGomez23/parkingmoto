@@ -30,7 +30,7 @@ public class ServicioRetirarMoto {
         validarExistenciaPrevia(placa);
         LocalDateTime fechaSalida = LocalDateTime.now();
         DtoMoto moto = daoMoto.obtenerMoto(placa);
-        Double tarifa = calcularTarifa(Timestamp.valueOf(moto.getFechaIngreso()), Timestamp.valueOf(fechaSalida));
+        Double tarifa = calcularTarifa(Timestamp.valueOf(fechaSalida.plusDays(1)), Timestamp.valueOf(fechaSalida));
         this.repositorioMoto.retirar(placa);
         return "El valor a pagar de la moto con placa " + placa +  "es de " + tarifa;
     }
