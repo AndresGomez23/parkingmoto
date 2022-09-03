@@ -1,4 +1,4 @@
-package com.ceiba.usuario.adaptador.dao;
+/*package com.ceiba.usuario.adaptador.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -21,4 +21,4 @@ public class MapeoUsuario implements RowMapper<DtoUsuario>, MapperResult {
         return new DtoUsuario(id,nombre,clave,fecha);
     }
 
-}
+}*/

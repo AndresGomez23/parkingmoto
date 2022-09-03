@@ -3,12 +3,9 @@ package com.ceiba.usuario.controlador;
 import com.ceiba.ComandoRespuesta;
 import com.ceiba.usuario.comando.ComandoMoto;
 import com.ceiba.usuario.comando.manejador.ManejadorCrearMoto;
-import com.ceiba.usuario.modelo.dto.DtoMoto;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/creacion")
