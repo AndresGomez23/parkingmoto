@@ -1,1 +1,1 @@
-select placa, casco, cilindraje, fecha_ingreso from moto where placa = 'aao71f';
+select placa, casco, cilindraje, fecha_ingreso from moto where placa = :placa;

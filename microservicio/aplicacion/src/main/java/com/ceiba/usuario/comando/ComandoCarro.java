@@ -9,9 +9,8 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class ComandoMoto {
-
+public class ComandoCarro {
     private String placa;
     private String cilindraje;
-    private int casco;
+
 }

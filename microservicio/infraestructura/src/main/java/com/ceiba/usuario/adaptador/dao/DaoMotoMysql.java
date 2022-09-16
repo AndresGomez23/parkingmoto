@@ -23,13 +23,17 @@ public class DaoMotoMysql implements DaoMoto {
     @SqlStatement(namespace ="sql.usuario", value ="obtenerPorPlaca")
     private static String sqlObtenerPorPlaca;
 
+    @SqlStatement(namespace ="sql.usuario", value ="obtenerPorFiltro")
+    private static String sqlObtenerPorFiltro;
+
     public DaoMotoMysql(CustomNamedParameterJdbcTemplate customNamedParameterJdbcTemplate) {
         this.customNamedParameterJdbcTemplate = customNamedParameterJdbcTemplate;
     }
 
     @Override
     public List<DtoMoto> listar() {
-        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate().query(sqlListar, new MapeoMoto());
+        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate()
+                .query(sqlListar, new MapeoMoto());
     }
 
     @Override
@@ -37,5 +41,13 @@ public class DaoMotoMysql implements DaoMoto {
         MapSqlParameterSource parametros = new MapSqlParameterSource();
         parametros.addValue("placa", placa);
         return this.customNamedParameterJdbcTemplate.consultarUnicoResultado(sqlObtenerPorPlaca, parametros, new MapeoMoto());
+    }
+
+    @Override
+    public List<DtoMoto> obtenerPorFiltro(String placa) {
+        MapSqlParameterSource parametros = new MapSqlParameterSource();
+        parametros.addValue("placa", "%".concat(placa).concat("%"));
+        return this.customNamedParameterJdbcTemplate.getNamedParameterJdbcTemplate()
+                .query(sqlObtenerPorFiltro, parametros, new MapeoMoto());
     }
 }

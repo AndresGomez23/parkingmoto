@@ -1,0 +1,1 @@
+select * from carro where placa like :placa

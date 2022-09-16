@@ -1,0 +1,1 @@
+select * from moto where placa like :placa

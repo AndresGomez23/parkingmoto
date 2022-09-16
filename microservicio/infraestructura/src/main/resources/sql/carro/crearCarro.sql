@@ -1,0 +1,1 @@
+insert into carro (placa, cilindraje, fecha_ingreso) values (:placa, :cilindraje, :fechaIngreso)

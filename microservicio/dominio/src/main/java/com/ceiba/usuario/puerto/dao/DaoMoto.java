@@ -7,11 +7,9 @@ import java.util.Optional;
 
 public interface DaoMoto {
 
-    /**
-     * Permite listar usuarios
-     * @return los usuarios
-     */
     List<DtoMoto> listar();
 
     Optional<DtoMoto> obtenerPorPlaca(String placa);
+
+    List<DtoMoto> obtenerPorFiltro(String placa);
 }
